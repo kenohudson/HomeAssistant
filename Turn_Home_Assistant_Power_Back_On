@@ -1,0 +1,13 @@
+alias: Turn_Home_Assistant_Power_Back_On
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - switch.plug_3
+condition: []
+action:
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id: switch.plug_3
+mode: single
